@@ -5,7 +5,7 @@
             const resultDiv = document.getElementById("result");
 
             if (!certNumber) {
-                resultDiv.innerHTML = "<p style='color: #ff4d4d;'>⚠️ Please enter a certificate number.</p>";
+                resultDiv.innerHTML = "<p style='color: white;'>⚠️ Please enter a certificate number.</p>";
                 return;
             }
 
@@ -15,11 +15,11 @@
                 const certificateNumbers = data.split("\n").map(row => row.trim());
 
                 if (certificateNumbers.includes(certNumber)) {
-                    resultDiv.innerHTML = "<p style='color: #00ff99;'>✅ Valid Certificate <br> <span>Certified Learner</span></p>";
+                    resultDiv.innerHTML = "<p style='color: white;'>✅ Valid Certificate <br> <span>Certified Learner</span></p>";
                 } else {
-                    resultDiv.innerHTML = "<p style='color: #ff4d4d;'>Incorrect detaild</p>"
+                    resultDiv.innerHTML = "<p style='color: white;'>Incorrect detaild</p>"
                 }
             } catch (error) {
-                resultDiv.innerHTML = "<p style='color: #ff4d4d;'>Error in loading</p>"
+                resultDiv.innerHTML = "<p style='color: white;'>Error in loading</p>"
             }
         }
